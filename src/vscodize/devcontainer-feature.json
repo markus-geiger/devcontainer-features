@@ -1,0 +1,7 @@
+{
+    "name": "Add vscode customiations",
+    "id": "color",
+    "version": "1.0.0",
+    "description": "Add vscode user and sudo",
+    "options": {}
+}
