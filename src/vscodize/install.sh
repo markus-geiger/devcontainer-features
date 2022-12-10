@@ -10,7 +10,7 @@ has_bin() {
 }
 
 if ! has_bin sudo; then
-     if has:bin yum; then
+     if has_bin yum; then
         yum -y install sudo
      elif has_bin dnf; then
         dnf -y install sudo
@@ -18,7 +18,7 @@ if ! has_bin sudo; then
         DEBIAN_FRONTEND=noninteractive apt -y install sudo
      elif has_bin apt-get; then
         DEBIAN_FRONTEND=noninteractive apt-get -y install sudo
-     elif apk; then
+     elif has_bin apk; then
         apk add sudo
      else
         echo "OS not supported" >&2
